@@ -1,4 +1,7 @@
 Cardiffrb::Application.routes.draw do
+
+  match "/auth/:provider/callback" => "sessions#create" 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
