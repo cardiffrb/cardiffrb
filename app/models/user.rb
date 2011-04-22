@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
       user.uid = auth["uid"]
       user.name = auth["user_info"]["name"]
       user.nickname = auth["user_info"]["nickname"]
+      user.nickname = auth["user_info"]["description"]
     end  
   end
 
