@@ -4,8 +4,19 @@ class UsersController < ApplicationController
     
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @users }
     end
-    
   end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    respond_to do |format|
+      format.html {
+        session[:user_id] = nil
+        redirect_to root_url
+      }
+    end
+  end
+
 end

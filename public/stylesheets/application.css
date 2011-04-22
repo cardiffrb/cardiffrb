@@ -97,6 +97,12 @@ div#user-nav {
 	margin:10px;
 }
 
+div#user-nav span.delete {
+	display:block;
+	font-size:0.75em;
+	margin-top:0.75em;
+}
+
 div#user-nav span.get-listed a {
 	background:#FF8000;
 	border:2px solid #C05C2C;

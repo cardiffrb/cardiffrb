@@ -3,6 +3,8 @@
 <head>
   <title>Cardiffrb</title>
   <%= stylesheet_link_tag "reset", "application" %>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<%= javascript_include_tag "rails" %>
   <%= csrf_meta_tag %>
 
 	<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
@@ -18,6 +20,7 @@
 	<div id="user-nav">
 	  <% if current_user %>
 	    <span class="signed-in">Signed in as <%= link_to "@#{current_user.nickname}", "http://twitter.com/#{current_user.nickname}" %> | <%= link_to "Sign Out", signout_path %></span>
+			<span class="delete">Don&rsquo;t want to be listed? <%= link_to 'Remove Me', user_path(current_user.id), :confirm => 'Are you sure? This will delete your account from cardiffrb.', :method => :delete %>
 	  <% else %>
 	    <span class="get-listed"><%= link_to "Get Listed! Sign in with Twitter", "/auth/twitter" %></span>
 	  <% end %>
