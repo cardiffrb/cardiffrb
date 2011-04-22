@@ -1,6 +1,7 @@
 body {
 	background:white url("../images/zig-zag.jpg") repeat;
 	font-family: "Lucida Grande", Arial, Sans-Serif;
+	font-size:200%;
 }
 
 a {
@@ -115,7 +116,7 @@ div#user-nav span.get-listed a {
 }
 
 footer {
-	color:#036;
+	color:#666;
 	font-size:0.85em;
 	margin-top:3em;
 	padding:1em;
