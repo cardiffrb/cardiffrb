@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
       user.nickname = auth["user_info"]["nickname"]
       user.description = auth["user_info"]["description"]
       user.image_url = auth["user_info"]["image"]
+      user.website = auth["user_info"]["urls"]["Website"]
     end  
   end
 
