@@ -100,6 +100,7 @@ div#user-nav {
 }
 
 div#user-nav span.delete {
+	color:#777;
 	display:block;
 	font-size:0.75em;
 	margin-top:0.75em;
