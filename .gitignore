@@ -1,0 +1,7 @@
+log/*.log
+log/**/*
+config/database.yml
+tmp/*
+doc/*
+public/system/*
+public/uploads/*
