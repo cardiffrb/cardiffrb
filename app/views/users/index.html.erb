@@ -1,7 +1,7 @@
 <% @users.each do |user| %>
 	<div class="user">
 		<%= image_tag user.image_url %>
-		<h1><%= user.name %></h1>
+		<h1><%= user.name %> <span class="twitter"><%= link_to "@#{user.nickname}", "http://twitter.com/#{user.nickname}" %></span></h1>
 		<p class="description"><%= user.description %></p>
 		<%= link_to user.website %>
 	</div>

@@ -1,0 +1,154 @@
+body {
+	background:#1693D0;
+	font-family: "Lucida Grande", Arial, Sans-Serif;
+}
+
+a {
+	color:#000;
+}
+
+a:focus,
+a:hover {
+	background:#FC6;
+	color:#111;
+	text-decoration:none;
+}
+
+header {
+	background:#800000;
+	border-bottom:2px solid #191919;
+	font-family:"Bevan", Impact, Arial, Sans-serif;
+	margin-bottom:1em;
+}
+
+header h1 {
+	color:#FC6;
+	display:block;
+	font-size:2em;
+	padding:0.5em 1em;
+	text-shadow:-1px -1px 1px #500;
+}
+
+header h1 span.rb {
+	color:#600;
+	letter-spacing:1px;
+	margin-left:0.25em;
+}
+
+div.intro {
+	margin:1em;
+}
+
+div.intro h2 {
+	color:#fff;
+	font-family:"Arvo", "Rockwell", Courier, "Courier New", monospace;
+	font-size:2.5em;
+	font-weight:bold;
+	letter-spacing:2px;
+	text-align:center;
+	text-shadow:1px 1px 2px #036;
+}
+
+div.user {
+	background:#FCFEEB;
+	border:2px solid #069;
+	box-shadow:2px 2px 0 #6CF;
+	float:left;
+	margin:10px;
+	max-width:33%;
+	min-width:240px;
+	padding:1em;
+}
+
+div.user img {
+	box-shadow:2px 2px 0 #CCC;
+	float:left;
+	margin: 0 1em 1em 0;
+}
+
+div.user h1 {
+	font-size:1.2em;
+	font-weight:bold;
+	margin-bottom:0.25em;
+}
+
+div.user span.twitter a {
+	color:#B3B3B3;
+	font-size:0.75em;
+	font-weight:normal;
+}
+div.user span.twitter a:focus,
+div.user span.twitter a:hover {
+	color:#111;
+}
+
+div.user p.description {
+	color:#666;
+	line-height:1.3;
+}
+
+div.user a {
+	font-size:0.85em;
+}
+
+div#user-nav {
+	display:block;
+	text-align:right;
+	margin:10px;
+}
+
+div#user-nav span.get-listed a {
+	background:#FF8000;
+	border:2px solid #C05C2C;
+	color:#fff;
+	padding:0.25em;
+	text-decoration:none;
+	text-shadow:1px 1px 0 #111;
+}
+
+footer {
+	color:#036;
+	font-size:0.85em;
+	margin-top:3em;
+	padding:1em;
+}
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*
+	The following zoom:1 rule is specifically for IE6 + IE7.
+	Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix {
+	zoom: 1;
+}

@@ -2,13 +2,38 @@
 <html>
 <head>
   <title>Cardiffrb</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag "reset", "application" %>
   <%= csrf_meta_tag %>
+
+	<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:regular,bold' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
-<%= yield %>
+	<header>
+		<h1>Cardiff<span class="rb">rb</span></h1>
+	</header>
+
+	<div id="user-nav">
+	  <% if current_user %>
+	    <span class="signed-in">Signed in as <%= link_to "@#{current_user.nickname}", "http://twitter.com/#{current_user.nickname}" %> | <%= link_to "Sign Out", signout_path %></span>
+	  <% else %>
+	    <span class="get-listed"><%= link_to "Get Listed! Sign in with Twitter", "/auth/twitter" %></span>
+	  <% end %>
+	</div>
+
+	<div class="intro">
+		<h2>I use Ruby in Cardiff!</h2>
+	</div>
+
+	<%= yield %>
+
+	<div class="clear"></div>
+
+	<footer>
+		<span class="by"><%= link_to "_gareth", "http://garethrees.co.uk" %> <%= Time.now.year %> &copy;</span>
+	</footer>
 
 </body>
 </html>
