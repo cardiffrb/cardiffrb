@@ -1,5 +1,5 @@
 body {
-	background:#1693D0;
+	background:#D5E9F6;
 	font-family: "Lucida Grande", Arial, Sans-Serif;
 }
 
@@ -15,8 +15,8 @@ a:hover {
 }
 
 header {
-	background:#800000;
-	border-bottom:2px solid #191919;
+	background:#C52F24;
+	border-bottom:2px solid #B2D5ED;
 	font-family:"Bevan", Impact, Arial, Sans-serif;
 	margin-bottom:1em;
 }
@@ -40,7 +40,7 @@ div.intro {
 }
 
 div.intro h2 {
-	color:#fff;
+	color:#1693D0;
 	font-family:"Arvo", "Rockwell", Courier, "Courier New", monospace;
 	font-size:2.5em;
 	font-weight:bold;
