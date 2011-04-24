@@ -7,6 +7,11 @@
 	<%= javascript_include_tag "rails" %>
   <%= csrf_meta_tag %>
 
+	<!-- Add html5shiv if browser doesn't support html5 elements -->
+	<!--[if lt IE 9]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
 	<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Arvo:regular,bold' rel='stylesheet' type='text/css'>
 
