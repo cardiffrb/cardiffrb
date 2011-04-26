@@ -12,10 +12,11 @@
   	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
+	<% nicknames = User.all.collect { |u| u.nickname } %>
 	<script>
 		$(document).ready(function(){
 		    $('#tweets').jTweetsAnywhere({
-		        username: <%= raw User.all.collect { |u| "#{'u.nickname'}" } %>,
+		        username: <%= raw nicknames %>,
 		        count: 10,
 		    });
 		});
