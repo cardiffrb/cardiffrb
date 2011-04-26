@@ -15,7 +15,7 @@
 	<script>
 		$(document).ready(function(){
 		    $('#tweets').jTweetsAnywhere({
-		        username: <%= raw User.all.collect { |u| u.nickname } %>,
+		        username: <%= raw User.all.collect { |u| "#{'u.nickname'}" } %>,
 		        count: 10,
 		    });
 		});
