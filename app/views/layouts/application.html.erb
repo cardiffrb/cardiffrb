@@ -2,15 +2,25 @@
 <html>
 <head>
   <title>Cardiffrb: A list of Ruby and Ruby on Rails developers in Cardiff, Wales UK</title>
-  <%= stylesheet_link_tag "reset", "application" %>
+  <%= stylesheet_link_tag "reset", "application", "jquery.jtweetsanywhere-1.2.1" %>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<%= javascript_include_tag "rails" %>
+	<%= javascript_include_tag "rails", "jquery.jtweetsanywhere-1.2.1.min", "application" %>
   <%= csrf_meta_tag %>
 
 	<!-- Add html5shiv if browser doesn't support html5 elements -->
 	<!--[if lt IE 9]>
   	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+	<script>
+		$(document).ready(function(){
+		    $('#tweets').jTweetsAnywhere({
+		        username: <%= raw User.all.collect { |u| u.nickname } %>,
+		        count: 10,
+		    });
+		});
+	</script>
+	
 
 	<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Arvo:regular,bold' rel='stylesheet' type='text/css'>
@@ -36,6 +46,13 @@
 	</div>
 
 	<%= yield %>
+	
+	<div class="clear"></div>
+
+	<section id="twitter-feed">
+		<h3>What We&rsquo;re Saying…</h3>
+		<div id="tweets"></div>
+	</section>
 
 	<div class="clear"></div>
 

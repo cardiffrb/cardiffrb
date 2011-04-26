@@ -115,6 +115,21 @@ div#user-nav span.get-listed a {
 	text-shadow:1px 1px 0 #111;
 }
 
+#twitter-feed {
+	margin:40px 2% 40px 2%;
+}
+
+#twitter-feed h3 {
+	color:#1693D0;
+	font-family:"Arvo", "Rockwell", Courier, "Courier New", monospace;
+	font-size:1.5em;
+	font-weight:bold;
+	letter-spacing:2px;
+	line-height:1.5;
+	margin-bottom:0.5em;
+	text-shadow:1px 1px 0 #fff;
+}
+
 footer {
 	color:#666;
 	font-size:0.85em;
