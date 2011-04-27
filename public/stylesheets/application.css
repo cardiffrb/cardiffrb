@@ -47,7 +47,6 @@ div.intro h2 {
 	font-weight:bold;
 	letter-spacing:2px;
 	line-height:1.5;
-	text-align:center;
 	text-shadow:1px 1px 0 #fff, 2px 2px 0 #036;
 }
 
@@ -113,6 +112,19 @@ div#user-nav span.get-listed a {
 	padding:0.25em;
 	text-decoration:none;
 	text-shadow:1px 1px 0 #111;
+}
+
+span.tweetup {
+	background:#DDD;
+	border-bottom:2px solid #fff;
+	border-top:2px solid #fff;
+	display:block;
+	line-height:1.5;
+	margin:2%;
+	padding:1em;
+	position:relative;
+	text-align:left;
+	text-shadow:0 1px 0 #fff;
 }
 
 #twitter-feed {
