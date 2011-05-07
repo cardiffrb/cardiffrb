@@ -114,6 +114,11 @@ div#user-nav span.get-listed a {
 	text-shadow:1px 1px 0 #111;
 }
 
+a.follow {
+	float:right;
+	margin:10px;
+}
+
 span.tweetup {
 	background:#DDD;
 	border-bottom:2px solid #fff;
