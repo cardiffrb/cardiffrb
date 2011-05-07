@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id])
+    @user = User.find(session[:user_id]) if session[:user_id]
     @user.destroy
 
     respond_to do |format|
