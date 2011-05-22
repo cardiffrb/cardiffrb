@@ -29,7 +29,9 @@ header {
 header h1 {
 	color:#FC6;
 	display:block;
+	float:left;
 	font-size:2em;
+	max-width:300px;
 	padding:0.5em 1em;
 	text-shadow:-1px -1px 1px #111;
 }
@@ -38,6 +40,38 @@ header h1 span.rb {
 	color:#C52F24;
 	letter-spacing:1px;
 	margin-left:0.25em;
+}
+
+/* USER NAV */
+div#user-nav {
+	color:#777;
+	display:block;
+	float:right;
+	font-size:0.85em;
+	margin:12px;
+	text-align:right;
+}
+
+div#user-nav a {
+	color:#C52F24;
+}
+
+div#user-nav span.delete {
+	color:#555;
+	display:block;
+	font-size:0.85em;
+	margin-top:0.75em;
+}
+
+div#user-nav span.get-listed a {
+	background:#FF8000;
+	border:2px solid #C05C2C;
+	color:#fff;
+	display:block;
+	margin:6px;
+	padding:0.5em;
+	text-decoration:none;
+	text-shadow:1px 1px 0 #111;
 }
 
 /*-----------------------------------------------------------------------------
@@ -137,30 +171,8 @@ div.user a {
 }
 
 /*-----------------------------------------------------------------------------
-* SIGNIN/SIGNOUT
+* TWEETUP
 /*---------------------------------------------------------------------------*/
-
-div#user-nav {
-	display:block;
-	text-align:right;
-	margin:10px;
-}
-
-div#user-nav span.delete {
-	color:#777;
-	display:block;
-	font-size:0.75em;
-	margin-top:0.75em;
-}
-
-div#user-nav span.get-listed a {
-	background:#FF8000;
-	border:2px solid #C05C2C;
-	color:#fff;
-	padding:0.25em;
-	text-decoration:none;
-	text-shadow:1px 1px 0 #111;
-}
 
 a.follow {
 	float:right;
