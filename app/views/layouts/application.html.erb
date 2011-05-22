@@ -32,32 +32,23 @@
 		<h1>Cardiff<span class="rb">rb</span></h1>
 	</header>
 
-	<div id="user-nav">
-	  <% if current_user %>
-	    <span class="signed-in">Signed in as <%= link_to "@#{current_user.nickname}", "http://twitter.com/#{current_user.nickname}" %> | <%= link_to "Sign Out", signout_path %></span>
-			<span class="delete">Don&rsquo;t want to be listed? <%= link_to 'Remove Me', user_path(current_user.id), :confirm => 'Are you sure? This will delete your account from cardiffrb.', :method => :delete %>
-	  <% else %>
-	    <span class="get-listed"><%= link_to "Get Listed! Sign in with Twitter", "/auth/twitter" %></span>
-	  <% end %>
-	</div>
-			<a class="follow" href="http://www.twitter.com/cardiffrb"><img src="http://twitter-badges.s3.amazonaws.com/follow_me-c.png" alt="Follow cardiffrb on Twitter"/></a>
-
 	<div class="intro">
-		<h2>I use Ruby in Cardiff!</h2>
+		<h2>We use Ruby in Cardiff!</h2>
 	</div>
 
-	<%= yield %>
+	<div class="container">
+		
+		<section id="twitter-feed">
+			<!-- <h3>What We&rsquo;re Saying…</h3> -->
+			<div id="tweets"></div>
+		</section>
+
+		<%= yield %>
 	
-	<div class="clear"></div>
-	<span class="tweetup">Don&rsquo;t use Ruby but love the web? Follow <%= link_to "@CardiffTweetup", "http://twitter.com/CardiffTweetup" %> and await further instruction!</span>
+		<div class="clear"></div>
+	</div>
 	
 
-	<section id="twitter-feed">
-		<h3>What We&rsquo;re Saying…</h3>
-		<div id="tweets"></div>
-	</section>
-
-	<div class="clear"></div>
 
 	<footer>
 		<span class="by">Comments / Suggestions / Copyright <%= link_to "_gareth", "http://garethrees.co.uk" %> <%= Time.now.year %> &copy;</span>

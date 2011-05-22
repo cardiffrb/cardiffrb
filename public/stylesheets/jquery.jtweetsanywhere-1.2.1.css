@@ -9,6 +9,7 @@
 
 .jta-tweet-list
 {
+	border:3px solid #CCC;
     padding: 0;
     list-style: none;
 }

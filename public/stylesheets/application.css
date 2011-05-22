@@ -14,12 +14,16 @@ a:hover {
 	text-decoration:none;
 }
 
+/*-----------------------------------------------------------------------------
+* HEADER
+/*---------------------------------------------------------------------------*/
+
 header {
-/*	background:#C52F24;*/
 	background:#333;
 	border-bottom:2px solid #CCC;
 	font-family:"Bevan", Impact, Arial, Sans-serif;
 	margin-bottom:1em;
+	min-width:760px;
 }
 
 header h1 {
@@ -36,6 +40,10 @@ header h1 span.rb {
 	margin-left:0.25em;
 }
 
+/*-----------------------------------------------------------------------------
+* INTRO
+/*---------------------------------------------------------------------------*/
+
 div.intro {
 	margin:1.5em;
 }
@@ -50,14 +58,49 @@ div.intro h2 {
 	text-shadow:1px 1px 0 #fff, 2px 2px 0 #036;
 }
 
+.container {
+	min-width:760px;
+}
+
+/*-----------------------------------------------------------------------------
+* TWITTER FEED
+/*---------------------------------------------------------------------------*/
+
+#twitter-feed {
+	float:left;
+	margin:10px 10px 10px 2%;
+	width:35%;
+	min-width:300px;
+}
+
+#twitter-feed h3 {
+	color:#1693D0;
+	font-family:"Arvo", "Rockwell", Courier, "Courier New", monospace;
+	font-size:1.5em;
+	font-weight:bold;
+	letter-spacing:2px;
+	line-height:1.5;
+	margin-bottom:0.5em;
+	text-shadow:1px 1px 0 #fff;
+}
+
+
+
+/*-----------------------------------------------------------------------------
+* USERS
+/*---------------------------------------------------------------------------*/
+
+section#users {
+	float:left;
+	width:55%;
+	min-width:428px;
+}
+
 div.user {
 	background:#fefefe;
 	border:2px solid #069;
 	box-shadow:2px 2px 0 #6CF; -mox-box-shadow:2px 2px 0 #6CF; -webkit-box-shadow:2px 2px 0 #6CF;
-	float:left;
 	margin:10px;
-	max-width:33%;
-	min-width:240px;
 	padding:1em;
 }
 
@@ -65,6 +108,7 @@ div.user img {
 	box-shadow:2px 2px 0 #CCC; -moz-box-shadow:2px 2px 0 #CCC; -webkit-box-shadow:2px 2px 0 #CCC;
 	float:left;
 	margin: 0 1em 1em 0;
+	width:48px;
 }
 
 div.user h1 {
@@ -91,6 +135,10 @@ div.user p.description {
 div.user a {
 	font-size:0.85em;
 }
+
+/*-----------------------------------------------------------------------------
+* SIGNIN/SIGNOUT
+/*---------------------------------------------------------------------------*/
 
 div#user-nav {
 	display:block;
@@ -132,20 +180,11 @@ span.tweetup {
 	text-shadow:0 1px 0 #fff;
 }
 
-#twitter-feed {
-	margin:40px 2% 40px 2%;
-}
 
-#twitter-feed h3 {
-	color:#1693D0;
-	font-family:"Arvo", "Rockwell", Courier, "Courier New", monospace;
-	font-size:1.5em;
-	font-weight:bold;
-	letter-spacing:2px;
-	line-height:1.5;
-	margin-bottom:0.5em;
-	text-shadow:1px 1px 0 #fff;
-}
+
+/*-----------------------------------------------------------------------------
+* FOOTER
+/*---------------------------------------------------------------------------*/
 
 footer {
 	color:#666;
