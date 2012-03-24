@@ -1,81 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cardiffrb: A list of Ruby and Ruby on Rails developers in Cardiff, Wales UK</title>
-  <%= stylesheet_link_tag "reset", "application", "jquery.jtweetsanywhere-1.2.1" %>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<%= javascript_include_tag "rails", "jquery.jtweetsanywhere-1.2.1.min", "application" %>
-  <%= csrf_meta_tag %>
-
-	<!-- Add html5shiv if browser doesn't support html5 elements -->
-	<!--[if lt IE 9]>
-  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-	<% nicknames = User.all.collect { |u| u.nickname } %>
-	<script>
-		$(document).ready(function(){
-		    $('#tweets').jTweetsAnywhere({
-		        username: <%= raw nicknames %>,
-		        count: 10,
-		    });
-		});
-	</script>
-
-	<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Arvo:regular,bold' rel='stylesheet' type='text/css'>
-
+  <title>Cardiffrb</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
 
-	<header class="clearfix">
-		<h1>Cardiff<span class="rb">rb</span></h1>
-		<div id="user-nav">
-			<% if current_user %>
-		    <span class="signed-in">Signed in as <%= link_to "@#{current_user.nickname}", "http://twitter.com/#{current_user.nickname}" %> | <%= link_to "Sign Out", signout_path %></span>
-				<span class="delete">Don&rsquo;t want to be listed? <%= link_to 'Remove Me', user_path(current_user.id), :confirm => 'Are you sure? This will delete your account from cardiffrb.', :method => :delete %>
-				</span>
-		  <% else %>
-		    <span class="get-listed"><%= link_to "Get Listed! Sign in with Twitter", "/auth/twitter" %></span>
-		  <% end %>
-		</div>
-	</header>
-
-	<div class="intro">
-		<h2>We use Ruby in Cardiff!</h2>
-	</div>
-
-	<div class="container">
-
-		<section id="meetup">
-			<span class="next">Next Meetup:</span> <a href="http://groups.google.com/group/cardiffrb/t/dc422bc132e0f737">15th September 2011</a> 
-		</section>
-
-		<div id="news">
-			<span>Join the <a href="http://groups.google.com/group/cardiffrb">mailing list</a> and follow <a href="http://twitter.com/cardiffrb">@cardiffrb</a> to get involved</span>
-		</div>
-		
-		<hr />
-		
-		<div class="clear"></div>
-
-		<section id="twitter-feed">
-			<!-- <h3>What We&rsquo;re Saying…</h3> -->
-			<div id="tweets"></div>
-		</section>
-		
-		<%= yield %>
-	
-		<div class="clear"></div>
-	</div>
-	
-
-
-	<footer>
-		<span class="by">Comments / Suggestions / Copyright <%= link_to "_gareth", "http://garethrees.co.uk" %> <%= Time.now.year %> &copy;</span>
-	</footer>
-
-	<%= render :partial => "shared/analytics" %>
+<%= yield %>
 
 </body>
 </html>
