@@ -7,6 +7,7 @@ gem 'mysql2'
 
 # App
 gem 'omniauth'
+gem 'omniauth-twitter'
 
 # Environments
 group :assets do
@@ -14,4 +15,9 @@ group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
 end
+
+group :test do
+  gem 'factory_girl_rails'
+end
+
 
