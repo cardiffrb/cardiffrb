@@ -1,7 +1,15 @@
-<h2>Users</h2>
+<section id="members">
+  <h1>Members</h1>
 
-<ul>
-<% @users.each do |user| %>
-  <li><%= user.nickname %></li>
-<% end %>
-</ul>
+  <% 23.times do %>
+  <article class="member">
+    <%= image_tag "http://placehold.it/48", class: "avatar" %>
+    <h1 class="name"><%= link_to "Member Name", "#" %></h1>
+    <h2 class="twitter"><%= link_to "@twitter", "#" %></h2>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non felis et justo consequat fermentum. Praesent id aliquam mauris. Maecenasas</p>
+  </article>
+  <% end -%>
+  <article class="member add">
+    <%= link_to "Add yourself with Twitter", "/auth/twitter" %>  
+  </article>
+</section>
