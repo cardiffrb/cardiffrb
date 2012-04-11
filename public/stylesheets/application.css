@@ -108,6 +108,19 @@ div.intro h2 {
 	text-transform:uppercase;
 }
 
+#meetup .lanyrd-target-splat, #meetup .lanyrd-target-splat * {
+  display: inline;
+  margin-top: 10px;
+}
+
+#meetup .lanyrd-target-splat h3 {
+  display: none;
+}
+
+#meetup .lanyrd-target-splat .lanyrd-date {
+  margin-right: 5px;
+}
+
 #news {
 	color:#1693D0;
 	margin:0 1.5em;
