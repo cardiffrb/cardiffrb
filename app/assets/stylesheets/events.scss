@@ -6,7 +6,22 @@
     display: inline;
     font-size: 24px;
   }
-  a {
-    font-size: 24px;
+
+  .lanyrd-target-splat {
+    display: inline;
+    & * {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+
+    h3 {
+      display: none;
+    }
+
+    .lanyrd-date {
+      font-size: 24px;
+      margin-right: 5px;
+    }
   }
 }

@@ -35,6 +35,9 @@
   <!-- JQuery from Google -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
 
+  <!-- Lanyrd -->
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+
   <!-- HTML5 Shim -->
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -64,7 +67,8 @@
   <div id="main" role="main">
 
     <div id="next-event">
-      <h1>Next Event: </h1> <%= link_to "Thursday 10th May", "http://lanyrd.com/2012/cardiffrb-may" %>
+      <h1>Next Event: </h1>
+      <div class="lanyrd-target-splat"><a href="http://lanyrd.com/profile/cardiffrb/" class="lanyrd-splat lanyrd-template-mini lanyrd-nomicroformats lanyrd-number-1 lanyrd-nostyles">View on Lanyrd</a></div>
     </div>
 
     <%= yield %>
