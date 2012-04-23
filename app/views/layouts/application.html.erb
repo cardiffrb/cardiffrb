@@ -62,6 +62,11 @@
   <%= render "shared/flash", object: flash %>
 
   <div id="main" role="main">
+
+    <div id="next-event">
+      <h1>Next Event: </h1> <%= link_to "Thursday 10th May", "http://lanyrd.com/2012/cardiffrb-may" %>
+    </div>
+
     <%= yield %>
   </div>
 
