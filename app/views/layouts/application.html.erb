@@ -45,6 +45,15 @@
 </head>
 <body>
 
+  <% if current_user %>
+    <div class="user-tools">
+      <ul>
+        <li><%= link_to "Sign Out", sign_out_path %></li>
+        <li><%= link_to "Delete Account", "#" %></li>
+      </ul>
+    </div>
+  <% end %>
+
   <header id="banner" role="banner">
     <h1 class="cardiffrb">cardiff<span>rb</span></h1>
     <h2>Join the <%= link_to "mailing list", "http://groups.google.com/group/cardiffrb" %> and follow <%= link_to "@cardiffrb", "http://twitter.com/cardiffrb" %></h2>
@@ -55,6 +64,10 @@
   <div id="main" role="main">
     <%= yield %>
   </div>
+
+  <footer id="footer" role="contentinfo">
+    <%= link_to "cardiffrb", root_url %> by <%= link_to "@_gareth", "http://twitter.com/_gareth" %>
+  </footer>
 
 </body>
 </html>
