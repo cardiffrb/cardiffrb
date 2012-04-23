@@ -21,7 +21,7 @@ end
 
 group :production do
   gem 'thin'
-  gem 'activerecord-postgresql-adapter'
+  gem 'pg'
 end
 
 group :test do
