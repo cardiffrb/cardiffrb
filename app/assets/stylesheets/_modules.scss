@@ -1,0 +1,34 @@
+/* MODULES */
+
+.clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.module {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.cardiffrb {
+  color: #FC6;
+  span {
+    color: #C52F24;
+  }
+}

@@ -44,39 +44,15 @@
 
 </head>
 <body>
-  <%# link_to 'Sign in with Twitter', '/auth/twitter' %>
 
   <header id="banner" role="banner">
     <h1 class="cardiffrb">cardiff<span>rb</span></h1>
-    <h2>Join the <%= link_to "mailing list", "http://groups.google.com/group/cardiffrb" %> and follow <%= link_to "@cardiffrb", "http://twitter.com/cardiffrb" %> to get involved</h2>
+    <h2>Join the <%= link_to "mailing list", "http://groups.google.com/group/cardiffrb" %> and follow <%= link_to "@cardiffrb", "http://twitter.com/cardiffrb" %></h2>
   </header>
 
-<div class="clearfix">
-  <section id="tweets">
-    <h1>Conversation</h1>
+  <div id="main" role="main">
+    <%= yield %>
+  </div>
 
-    <% 5.times do %>
-    <article class="tweet">
-      <%= image_tag "http://placehold.it/48", class: "avatar" %>
-      <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-    </article>
-    <% end -%>
-  </section>
-
-  <section id="events">
-  <h1>Events</h1>
-
-   <% 3.times do %>
-    <article class="event">
-      <h1>April 12th 2012</h1>
-      <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-    </article>
-    <% end -%>
-  </section>
-</div>
-
-
-  <%= yield %>
-  
 </body>
 </html>

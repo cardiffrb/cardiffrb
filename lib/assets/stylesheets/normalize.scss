@@ -96,6 +96,11 @@ body {
    Links
    ========================================================================== */
 
+a {
+  color: #C52F24;
+  text-decoration: none;
+}
+
 /*
  * Addresses outline displayed oddly in Chrome
  */
@@ -111,6 +116,8 @@ a:focus {
 
 a:hover,
 a:active {
+    background: #C52F24;
+    color: #FFF;
     outline: 0;
 }
 

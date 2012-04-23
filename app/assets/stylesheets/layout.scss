@@ -1,75 +1,22 @@
-/* MODULES */
-
-.clearfix {
-  zoom:1;
-  &:before, &:after {
-    content: "\0020"; 
-    display: block; 
-    height: 0; 
-    overflow: hidden; 
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-.module {
-  display: inline;
-  float: left;
-  margin: 0 10px;
-
-/*  &:first-of-type {
-    margin-left: 0;
-  }
-  &:last-of-type {
-    margin-right: 0;
-  }*/
-}
-
-/* STYLES */
+@import "modules";
 
 html {
-  background: #eee url("http://cardiffrb.com/images/zig-zag.jpg");
+  background: #EEE url("http://cardiffrb.com/images/zig-zag.jpg");
 }
 
 body {
-//  background: #C52F24;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background: #FFF;
+  box-shadow: 0 0 8px rgba(0,0,0,0.25);
   color: #444;
-  font-family: verdana, arial;
-  margin: 1.5% 2%;
-  width: 96%;
+  font-family: verdana, arial, sans-serif;
+  margin: 1.5% auto;
+  max-width: 720px;
+  min-width: 420px;
+  padding: 1%;
 }
-
-a {
-  text-decoration: none;
-  &:hover {
-    background: #FC6;
-  }
-}
-
-section {
-    &>h1 {
-        border-bottom: 2px solid #ddd;
-        color: #222;
-        margin-top: 0;
-    }
-}
-
-.cardiffrb {
-  color: #FC6;
-  span {
-    color: #C52F24;
-  }
-}
-
 
 #banner {
   @extend .clearfix;
-  /*background: rgba(0,0,0,0.9);*/
-//  background: darken(#C52F24, 37%);
-  background: #222;
   margin-bottom: 20px;
   padding: 20px;
 
@@ -82,57 +29,15 @@ section {
     color: #999;
     font-size: 28px;
     font-weight: normal;
+    letter-spacing: -1px;
     margin: 10px 0;
   }
-
-  a {
-    color: #C52F24;
-  }
-
 }
 
-
-#tweets {
-  @extend .clearfix;
-  @extend .module;
-  margin-bottom: 20px;
-  padding: 0 20px;
-  width: 45%;
-
-  .tweet {
-    @extend .clearfix;
-    margin-bottom: 10px;
-    .avatar {
-      float: left;
-      margin-right: 10px;
-    }
-    .text {
-      font-size: 18px;
-    }
-  }
+section > h1 {
+  border-bottom: 4px solid #EEE;
 }
 
-#events {
-  @extend .clearfix;
-  @extend .module;
-  margin-bottom: 20px;
-  padding: 0 20px;
-  width: 45%;
-
-  .event {
-      padding: 10px;
-      h1 {
-          font-size: 18px;
-          margin: 0;
-      }
-  }
-
-  .event:first-of-type {
-    background: #FC6;
-    border: 2px solid darken(#FC6, 10%);
-  }
-
-}
 
 
 

@@ -1,30 +1,4 @@
-/* MODULES */
-
-.clearfix {
-  zoom:1;
-  &:before, &:after {
-    content: "\0020"; 
-    display: block; 
-    height: 0; 
-    overflow: hidden; 
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-.module {
-  display: inline;
-  float: left;
-  margin: 0 10px;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-  &:last-of-type {
-    margin-right: 0;
-  }
-}
+@import "modules";
 
 #members {
   @extend .clearfix;
@@ -32,44 +6,51 @@
   padding: 0 20px;
 
   .member {
-    @extend .module;
-    background: darken(#C52F24, 5%);
-    /*background: #FFF7FB;*/
-    background: #F4F0E7;
-//    border: 2px solid darken(#C52F24, 20%);
-    box-shadow: 0 0 3px rgba(0,0,0,0.25);
-    height: 135px;
-    margin: 0 20px 20px 0;
-    padding: 10px;
-    width: 30%;
+    margin: 0 0 18px 0;
 
     a {
-        color: #444;
+      color: #444;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: #DDD;
+      }
     }
 
     .name {
-      font-size: 24px;
-      margin: 0;
+      font-size: 18px;
+      line-height: 1.3;
+      margin: 0 0 0.2em 0;
     }
 
     .twitter {
-      font-size: 16px;
+      font-size: 14px;
+      font-weight: normal;
       margin: 0;
     }
 
     .avatar {
-      float: right;
-    }
-
-    .description {
-      color: #555;
-      font-size: 14px;
-      text-shadow: 0 -1px 0 #fff;
+      border-radius: 3px;
+      float: left;
+      margin-right: 10px;
     }
   }
 
   .member.add {
-    background: #eee;
+    background: url("http://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/48/twitter.png") no-repeat left center;
+    line-height: 48px;
+    min-height: 48px;
+    padding-left: 58px;
+
+    a {
+      color: #53C7ED;
+      font-weight: bold;
+
+      &:visited {
+        color: #53C7ED;
+      }
+    }
   }
 
 }
