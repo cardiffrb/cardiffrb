@@ -50,6 +50,8 @@
     <h2>Join the <%= link_to "mailing list", "http://groups.google.com/group/cardiffrb" %> and follow <%= link_to "@cardiffrb", "http://twitter.com/cardiffrb" %></h2>
   </header>
 
+  <%= render "shared/flash", object: flash %>
+
   <div id="main" role="main">
     <%= yield %>
   </div>

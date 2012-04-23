@@ -4,4 +4,11 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def destroy
+    @user = User.find(session[:user_id]) if session[:user_id]
+    @user.destroy
+    session[:user_id] = nil
+    redirect_to root_url, notice: "Removed from cardiffrb"
+  end
+
 end

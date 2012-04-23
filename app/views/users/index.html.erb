@@ -1,14 +1,16 @@
 <section id="members">
   <h1>Members</h1>
 
-  <% 23.times do %>
-  <article class="member">
-    <%= image_tag "http://placehold.it/48", class: "avatar" %>
-    <h1 class="name"><%= link_to "Member Name", "#" %></h1>
-    <h2 class="twitter"><%= link_to "@twitter", "#" %></h2>
-  </article>
-  <% end -%>
-  <article class="member add">
-    <%= link_to "Add yourself with Twitter", "/auth/twitter" %>  
-  </article>
+  <% @users.each_with_index do |user, index| %>
+    <% if index % 6 == 0 %>
+      <article class="member add">
+        <%= link_to "Add yourself with Twitter", "/auth/twitter" %>
+      </article>
+    <% end %>
+    <article class="member">
+      <%= image_tag user.image_url, class: "avatar" %>
+      <h1 class="name"><%= link_to user.name, user.website %></h1>
+      <h2 class="twitter"><%= link_to "@#{user.nickname}", "http://twitter.com/#{user.nickname}" %></h2>
+    </article>
+  <% end %>
 </section>
