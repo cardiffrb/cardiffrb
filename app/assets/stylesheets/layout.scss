@@ -38,6 +38,10 @@ body {
   }
 }
 
+#main {
+  @extend .clearfix;
+}
+
 .user-tools {
   @extend .clearfix;
   display: inline-block;
