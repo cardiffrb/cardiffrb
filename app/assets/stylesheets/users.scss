@@ -2,8 +2,10 @@
 
 #members {
   @extend .clearfix;
+  float: left;
   margin-bottom: 20px;
   padding: 0 20px;
+  width: 533px;
 
   .member {
     margin: 0 0 18px 0;
@@ -54,5 +56,25 @@
       }
     }
   }
+}
 
+.ad {
+  background: #ff9;
+  border: 1px solid darken(#ff9, 35%);
+  float: left;
+  height: 130px;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  top: 10px;
+  width: 127px;
+
+  p {
+    font-size: 0.9em;
+    margin: 0.2em 0 0.6em 0;
+  }
+
+  img {
+    display: block;
+  }
 }

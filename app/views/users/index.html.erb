@@ -14,3 +14,12 @@
     </article>
   <% end %>
 </section>
+
+<div class='ad'>
+  <% if current_user %>
+    <%= link_to image_tag('http://oreilly.com/images/ads/ug_discount_125x125.gif'), 'http://oreilly.com/ug' %>
+  <% else %>
+    <p>Members get up to <b>50%</b> off O&rsquo;Reilly books.</p>
+    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+  <% end %>
+</div>
