@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  scope :with_custom_avatar, lambda { where("image_url NOT LIKE 'http://a0.twimg.com/sticky/%'") }
+
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth["provider"]
